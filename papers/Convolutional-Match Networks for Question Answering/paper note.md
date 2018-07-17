@@ -34,3 +34,20 @@ d) extensive weight sharing can help profoundly.
 - input encoding
 
   embedding layer 逐个处理Word，首先每个each word is encoded as a vector of length n neurons,
+
+
+
+## 卷积神经网络
+
+输入层 => 卷积层 => 池化层 => 全连接层
+
+- 卷积层（为了从局部提取特征）
+- 池化层（减少参数目的是减少计算复杂度）
+- 全连接层（最终的分类）
+
+
+
+- 激活函数
+- Sigmoid 
+- Rectified Linear Unit(ReLU) 
+
