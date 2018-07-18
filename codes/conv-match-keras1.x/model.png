@@ -1,0 +1,29 @@
+digraph G {
+node [shape=record];
+140324286732368 [label="Sequential
+|{input:|output:}|{{(None, None)}|{(None, None, 128)}}"];
+140324009904784 [label="Sequential
+|{input:|output:}|{{(None, 5)}|{(None, 128)}}"];
+140324009319376 [label="Sequential
+|{input:|output:}|{{[(None, None), (None, 5)]}|{(None, 128)}}"];
+140323959899984 [label="Sequential
+|{input:|output:}|{{[(None, None), (None, 5)]}|{(None, 128)}}"];
+140323959150928 [label="AttentionMerge
+|{input:|output:}|{{[(None, None, 128), (None, 128), (None, 128), (None, 128)]}|{(None, None, 128)}}"];
+140324009319184 [label="Convolution1D
+|{input:|output:}|{{(None, None, 128)}|{(None, None, 128)}}"];
+140324009319056 [label="AttentionRecurrent
+|{input:|output:}|{{(None, None, 128)}|{(None, 128)}}"];
+140324009319312 [label="Dense
+|{input:|output:}|{{(None, 128)}|{(None, 36)}}"];
+140323958096464 [label="Activation
+|{input:|output:}|{{(None, 36)}|{(None, 36)}}"];
+140324286732368 -> 140323959150928;
+140324009904784 -> 140323959150928;
+140324009319376 -> 140323959150928;
+140323959899984 -> 140323959150928;
+140323959150928 -> 140324009319184;
+140324009319184 -> 140324009319056;
+140324009319056 -> 140324009319312;
+140324009319312 -> 140323958096464;
+}
